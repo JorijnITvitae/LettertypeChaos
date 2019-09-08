@@ -1,0 +1,42 @@
+﻿<Window x:Class="LettertypeChaos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LettertypeChaos"
+        mc:Ignorable="d"
+        Title="LettertypeChaos" Height="480" Width="640">
+
+    <Border Margin="2">
+    
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="32" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <RichTextBox x:Name="RichTextBox_Input" Grid.Column="0" Margin="2" IsReadOnly="False">
+                    <FlowDocument>
+                        <Paragraph Margin="0" />
+                    </FlowDocument>
+                </RichTextBox>
+
+                <RichTextBox x:Name="RichTextBox_Output" Grid.Column="1" Margin="2" IsReadOnly="True" />
+
+            </Grid>
+
+            <Button Grid.Row="1" Margin="2" Content="SCRAMBLE FONTS" Click="Button_ScrambleFonts_Click" />
+
+        </Grid>
+
+    </Border>
+
+</Window>
